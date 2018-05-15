@@ -1,0 +1,768 @@
+<!doctype html>
+<html lan="es">
+<head>
+<title>21th url</title>
+<meta charset="utf-8">
+<link type="text/css" rel="stylesheet" href="18.css" >
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+				 function resizeHeaderOnScroll() {
+  const distanceY = window.pageYOffset || document.documentElement.scrollTop,
+  shrinkOn = 250,
+  headerEl = document.getElementById('header');
+  
+  if (distanceY > shrinkOn) {
+    headerEl.classList.add("smaller");
+  } else {
+    headerEl.classList.remove("smaller");
+  }
+}
+
+window.addEventListener('scroll', resizeHeaderOnScroll);
+
+function errorFunction(){
+	var error="";
+	if(validateNonEmpty() && validateEmpty() && forradio() && forphone() && foremail() && foryear() && forselect() && formid() && forem() && foraus() && forsub()) {
+			document.getElementByClassName('errormsg')="";
+		}
+	else {
+		if(!validateNonEmpty()) {
+			error=error+'<li>'+document.getElementById("fin").innerHTML+'</li>';
+			}
+		if(!validateEmpty()) {
+			error=error+'<li>'+document.getElementById("secd").innerHTML+'</li>';
+			}
+		}
+	document.getElementByClassName('errormsg').innerHTML=error;
+ }
+ function submitFunction(){
+	 
+	 validateNonEmpty();
+	 validateEmpty();
+	 forradio();
+	 forphone();
+	 foremail();
+	 foryear();
+	 forselect();
+	 formid();
+	 forem();
+	 foraus();
+	 forsub();
+	 errorFunction();
+ }
+   
+ function validateNonEmpty(){
+	 var fname=document.myForm.fname;
+	 if(fname.value=="")
+	 {
+		 document.getElementById("fin").innerHTML="O campo Nome é obrigatório.";
+		 document.getElementById("fin").style.color="red";
+		 fname.className="wrong";
+		 return false;
+	 }else
+	 {
+		 document.getElementById("fin").innerHTML="";
+		 fname.className="tick";
+		 return true;
+	 }
+		 
+		}		
+		function validateEmpty(){
+	 var second=document.myForm.second;
+	 if(second.value=="")
+	 {
+		 document.getElementById("secd").innerHTML="O campo Sobrenome é obrigatório.";
+		  document.getElementById("secd").style.color="red";
+		 second.className="wrong";
+		 return false;
+	 }else
+	 {
+		 document.getElementById("secd").innerHTML="";
+		 second.className="tick";
+		 return true;
+	 }
+		 
+		}		
+		function forradio(){
+			var third=document.myForm.third;
+			if(third.value=="")
+			{
+				document.getElementById("thd").innerHTML="O campo Sexo é obrigatório.";
+				 document.getElementById("thd").style.color="red";
+				third.className="wrong";
+				return false;
+			}
+			else{
+				document.getElementById("thd").innerHTML="";
+				third.className="tick";
+				return true;
+			}
+		}
+		function foremail(){
+			var fourth=document.myForm.fourth;
+			if(fourth.value=="")
+			{
+				document.getElementById("foth").innerHTML="O campo E-mail é obrigatório.";
+				 document.getElementById("foth").style.color="red";
+				fourth.className="wrong";
+				return false;
+			}
+			else{
+				document.getElementById("foth").innerHTML="";
+				fourth.className="tick";
+				return true;
+			}
+		}
+		function forphone(){
+			var fifth=document.myForm.fifth;
+			
+			if(fifth.value==""){
+				document.getElementById("5th").innerHTML="O campo Número do telefone/celular é obrigatório."
+				 document.getElementById("5th").style.color="red";
+				fifth.className="wrong";
+				return false;
+			}else {
+				document.getElementById("5th").innerHTML="";
+				fifth.className="tick";
+				return true;
+			}
+		}
+		function forselect(){
+			var sixth=document.myForm.sixth;
+			if(sixth.value=="")
+			{
+				document.getElementById("6th").innerHTML="O campo País de residência é obrigatório.";
+				document.getElementById("6th").style.color="red";
+				sixth.className="wrong";
+				return false;
+			}else
+			{
+				document.getElementById("6th").innerHTML="";
+				sixth.className="tick";
+				return true;
+			}
+		}
+	function foryear(){
+		var eight=document.myForm.eight;
+		if(eight.value=="")
+		{
+			document.getElementById("8th").innerHTML="O campo Ano de nascimento é obrigatório.";
+			document.getElementById("8th").style.color="red";
+			eight.className="wrong";
+			return false;
+		}else{
+			document.getElementById("8th").innerHTML="";
+			eight.className="tick";
+			return true;
+		}
+	}
+	function formid(){
+		var seven=document.myForm.seven;
+		if(seven.value=="")
+		{
+			document.getElementById("7th").innerHTML="O campo No que podemos ajudar? é obrigatório.";
+			document.getElementById("7th").style.color="red";
+			seven.className="wrong";
+			return false;
+		}else{
+			document.getElementById("7th").innerHTML="";
+			seven.className="tick";
+			return true;
+		}
+	}
+function foraus(){
+		var nine=document.myForm.nine;
+		if(nine.value=="")
+		{
+			document.getElementById("9th").innerHTML="O campo País de interesse é obrigatório.";
+			document.getElementById("9th").style.color="red";
+			nine.className="wrong";
+			return false;
+		}else{
+			document.getElementById("9th").innerHTML="";
+			nine.className="tick";
+			return true;
+		}
+	}
+function forem(){
+		var ten=document.myForm.ten;
+		if(ten.value=="")
+		{
+			document.getElementById("10th").innerHTML="This field is required.";
+			document.getElementById("10th").style.color="red";
+			ten.className="wrong";
+			return false;
+		}else{
+			document.getElementById("10th").innerHTML="";
+			ten.className="tick";
+			return true;
+		}
+	}
+	function forsub(){
+		var leven=document.myForm.leven;
+		if(leven.value=="")
+		{
+			document.getElementById("11th").innerHTML="O campo Termos e condições é obrigatório.";
+			document.getElementById("11th").style.color="red";
+			leven.className="wrong";
+			return false;
+		}else{
+			document.getElementById("11th").innerHTML="";
+			leven.className="tick";
+			return true;
+		}
+	}
+
+
+</script>
+</head>
+<body>
+	
+    <header id="header">		
+      <img id="logo" src="index.png" alt="logo">    
+      
+      <div class="container">
+		<div class="dropdown" id="languages">
+		<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Selecciona un idioma
+		<span class="caret"></span></button>
+		<ul class="dropdown-menu ">
+		<li><a href="#">العربية</a></li>
+		<li><a href="#">中文(中华人民共和国)</a></li>
+		<li><a href="#">中文(台灣)</a></li>
+		<li><a href="#">English (United Kingdom)</a></li>
+		<li><a href="#">日本語</a></li>
+		<li><a href="#">한국어</a></li>
+		<li><a href="#">portugu&#234;s</a></li>
+		<li><a href="#">русский</a></li>
+		<li><a href="#">espa&#241;ol</a></li>
+		<li><a href="#">ไทย</a></li>
+		<li><a href="#">T&#252;rk&#231;e</a></li>
+		<li><a href="#">Ti&#234;́ng Việt</a></li>
+		<li><a href="#">English</a></li>
+		</ul>
+		
+		</div>
+    </div>
+    </header>
+    <div id="bodyimage">
+    <div id="para">
+<div id="border"></div>
+ <p id="first">Estude inglês. Explore.  </p>
+ <p id="second">Tenha êxito.</p>
+
+    </div>
+    </div>
+    <div class="sideba">
+		<form name="myForm" action="#" method="get">
+			 <div class="tab">
+		
+	<h1 id="nv">Entre em contato com o ELS!</h1>
+	
+	<ul class="errormsg">
+	
+	</ul>
+	
+	<p><span class="star">*</span>Nome</p>
+	<input type="text" name="fname" onchange="validateNonEmpty()";/>
+	<p id="fin"></p>
+	<p><span class="star">*</span>Sobrenome</p>
+	<input type="text" name="second" value="" onchange="validateEmpty()";/>
+	<p id="secd"></p>
+	<p><span class="star">*</span>Sexo</p>
+	<input type="radio" name="third" value="Homem" onchange="forradio()";/> Homem<br>
+	<input type="radio" name="third" value="Mulher"> Mulher<br>
+	<p id="thd"></p>
+	<p><span class="star">*</span>E-mail</p>
+	<input type="text" name="fourth" value="" onchange="foremail()";/>
+	<p id="foth"
+	<p><span class="star">*</span>Número do telefone/celular</p>
+	<input type="text" name="fifth" value="" onchange="forphone()";/>
+	<p id="5th"></p>
+	<p><span class="star">*</span>País de residência</p>
+	<select class="sef" name="sixth" onchange="forselect()";/>
+		<option value=""></option>
+	<option value="AA">Aruba</option>
+<option value="AC">Ant&#237;gua e Barbuda</option>
+<option value="AE">Emirados &#193;rabes Unidos</option>
+<option value="AF">Afeganist&#227;o</option>
+<option value="AG">Arg&#233;lia</option>
+<option value="AJ">Azerbaij&#227;o</option>
+<option value="AL">Alb&#226;nia</option>
+<option value="AM">Arm&#234;nia</option>
+<option value="AN">Andorra</option>
+<option value="AO">Angola</option>
+<option value="AR">Argentina</option>
+<option value="AS">Austr&#225;lia</option>
+<option value="AT">Ilhas Ashmore e Cartier</option>
+<option value="AU">&#193;ustria</option>
+<option value="AUS">Austr&#225;lia</option>
+<option value="AV">Anguilla</option>
+<option value="BA">Bahrein</option>
+<option value="BB">Barbados</option>
+<option value="BC">Botswana</option>
+<option value="BD">Bermudas</option>
+<option value="BE">B&#233;lgica</option>
+<option value="BF">Bahamas</option>
+<option value="BG">Bangladesh</option>
+<option value="BH">Belize</option>
+<option value="BK">B&#243;snia e Herzegovina</option>
+<option value="BL">Bol&#237;via</option>
+<option value="BM">Birm&#226;nia</option>
+<option value="BN">Benin</option>
+<option value="BO">Belarus</option>
+<option value="BP">Ilhas Salom&#227;o</option>
+<option value="BR">Brasil</option>
+<option value="BS">Bassas da &#205;ndia</option>
+<option value="BT">But&#227;o</option>
+<option value="BU">Bulg&#225;ria</option>
+<option value="BV">Ilha Bouvet</option>
+<option value="BX">Brunei</option>
+<option value="BY">Burundi</option>
+<option value="CA">Canad&#225;</option>
+<option value="CB">Camboja</option>
+<option value="CD">Chade</option>
+<option value="CE">Sri Lanka</option>
+<option value="CF">Congo</option>
+<option value="CG">Rep&#250;blica Democr&#225;tica do Congo</option>
+<option value="CH">China</option>
+<option value="CI">Chile</option>
+<option value="CJ">Ilhas Cayman</option>
+<option value="CK">Ilhas Cocos (Keeling)</option>
+<option value="CM">Camar&#245;es</option>
+<option value="CN">Comores</option>
+<option value="CO">Col&#244;mbia</option>
+<option value="CR">Ilhas do Mar de Coral</option>
+<option value="CS">Costa Rica</option>
+<option value="CT">Rep&#250;blica Centro Africana</option>
+<option value="CU">Cuba</option>
+<option value="CV">Cabo Verde</option>
+<option value="CW">Ilhas Cook</option>
+<option value="CY">Chipre</option>
+<option value="DA">Dinamarca</option>
+<option value="DJ">Djibuti</option>
+<option value="DO">Dominica</option>
+<option value="DR">Rep&#250;blica Dominicana</option>
+<option value="EC">Equador</option>
+<option value="EG">Egito</option>
+<option value="EI">Irlanda</option>
+<option value="EK">Guin&#233; Equatorial</option>
+<option value="EN">Est&#244;nia</option>
+<option value="ER">Eritreia</option>
+<option value="ES">El Salvador</option>
+<option value="ET">Eti&#243;pia</option>
+<option value="EU">Ilha Europa</option>
+<option value="EZ">Rep&#250;blica Tcheca</option>
+<option value="FG">Guiana Francesa</option>
+<option value="FI">Finl&#226;ndia</option>
+<option value="FJ">Fiji</option>
+<option value="FK">Ilhas Falkland (Malvinas)</option>
+<option value="FM">Federa&#231;&#227;o dos Estados da Micron&#233;sia</option>
+<option value="FO">Ilhas Faroe</option>
+<option value="FP">Polin&#233;sia Francesa</option>
+<option value="FR">Fran&#231;a</option>
+<option value="FS">Terras Austrais e Ant&#225;rticas Francesas</option>
+<option value="GA">G&#226;mbia</option>
+<option value="GB">Gab&#227;o</option>
+<option value="GG">Ge&#243;rgia</option>
+<option value="GH">Gana</option>
+<option value="GI">Gibraltar</option>
+<option value="GJ">Granada</option>
+<option value="GK">Guernsey</option>
+<option value="GL">Groenl&#226;ndia</option>
+<option value="GM">Alemanha</option>
+<option value="GO">Ilhas Gloriosas</option>
+<option value="GP">Guadalupe</option>
+<option value="GR">Gr&#233;cia</option>
+<option value="GT">Guatemala</option>
+<option value="GV">Guin&#233;</option>
+<option value="GY">Guiana</option>
+<option value="GZ">Faixa de Gaza</option>
+<option value="HA">Haiti</option>
+<option value="HK">Hong Kong</option>
+<option value="HM">Ilhas Heard e Ilhas Mcdonald</option>
+<option value="HO">Honduras</option>
+<option value="HR">Cro&#225;cia</option>
+<option value="HU">Hungria</option>
+<option value="IC">Isl&#226;ndia</option>
+<option value="ID">Indon&#233;sia</option>
+<option value="IM">Ilha de Man</option>
+<option value="IN">&#205;ndia</option>
+<option value="IO">Territ&#243;rio Brit&#226;nico do Oceano &#205;ndico</option>
+<option value="IP">Ilha de Clipperton</option>
+<option value="IR">Ir&#227;</option>
+<option value="IS">Israel</option>
+<option value="IT">It&#225;lia</option>
+<option value="IV">Costa do Marfim</option>
+<option value="IZ">Iraque</option>
+<option value="JA">Jap&#227;o</option>
+<option value="JE">Jersey</option>
+<option value="JM">Jamaica</option>
+<option value="JN">Jan Mayen</option>
+<option value="JO">Jord&#226;nia</option>
+<option value="JU">Ilha Juan de Nova</option>
+<option value="KE">Qu&#234;nia</option>
+<option value="KG">Quirguist&#227;o</option>
+<option value="KN">Coreia do Norte</option>
+<option value="KR">Kiribati</option>
+<option value="KS">Coreia do Sul</option>
+<option value="KT">Ilha Christmas</option>
+<option value="KU">Kuwait</option>
+<option value="KV">Kosovo</option>
+<option value="KZ">Cazaquist&#227;o</option>
+<option value="LA">Laos</option>
+<option value="LE">L&#237;bano</option>
+<option value="LG">Let&#244;nia</option>
+<option value="LH">Litu&#226;nia</option>
+<option value="LI">Lib&#233;ria</option>
+<option value="LO">Eslov&#225;quia</option>
+<option value="LS">Liechtenstein</option>
+<option value="LT">Lesoto</option>
+<option value="LU">Luxemburgo</option>
+<option value="LY">L&#237;bia</option>
+<option value="MA">Madagascar</option>
+<option value="MB">Martinica</option>
+<option value="MC">Macau</option>
+<option value="MD">Mold&#225;via</option>
+<option value="MF">Mayotte</option>
+<option value="MG">Mong&#243;lia</option>
+<option value="MH">Montserrat</option>
+<option value="MI">Malawi</option>
+<option value="MK">Maced&#244;nia</option>
+<option value="ML">Mali</option>
+<option value="MN">M&#244;naco</option>
+<option value="MO">Marrocos</option>
+<option value="MP">Maur&#237;cio</option>
+<option value="MR">Maurit&#226;nia</option>
+<option value="MT">Malta</option>
+<option value="MU">Om&#227;</option>
+<option value="MV">Maldivas</option>
+<option value="MW">Montenegro</option>
+<option value="MX">M&#233;xico</option>
+<option value="MY">Mal&#225;sia</option>
+<option value="MZ">Mo&#231;ambique</option>
+<option value="NC">Nova Caled&#244;nia</option>
+<option value="NE">Niue</option>
+<option value="NF">Ilha Norfolk</option>
+<option value="NG">N&#237;ger</option>
+<option value="NH">Vanuatu</option>
+<option value="NI">Nig&#233;ria</option>
+<option value="NL">Holanda</option>
+<option value="NO">Noruega</option>
+<option value="NP">Nepal</option>
+<option value="NR">Nauru</option>
+<option value="NS">Suriname</option>
+<option value="NU">Nicar&#225;gua</option>
+<option value="NZ">Nova Zel&#226;ndia</option>
+<option value="PA">Paraguai</option>
+<option value="PC">Ilhas Pitcairn</option>
+<option value="PE">Peru</option>
+<option value="PF">Ilhas Paracel</option>
+<option value="PG">Ilhas Spratly</option>
+<option value="PK">Paquist&#227;o</option>
+<option value="PL">Pol&#244;nia</option>
+<option value="PM">Panam&#225;</option>
+<option value="PO">Portugal</option>
+<option value="PP">Papua Nova Guin&#233;</option>
+<option value="PS">Palau</option>
+<option value="PU">Guin&#233;-Bissau</option>
+<option value="QA">Catar</option>
+<option value="RE">Reuni&#227;o</option>
+<option value="RM">Ilhas Marshall</option>
+<option value="RN">Saint Martin</option>
+<option value="RO">Rom&#234;nia</option>
+<option value="RP">Filipinas</option>
+<option value="RQ">Porto Rico</option>
+<option value="RS">R&#250;ssia</option>
+<option value="RW">Ruanda</option>
+<option value="SA">Ar&#225;bia Saudita</option>
+<option value="SB">Saint Pierre e Miquelon</option>
+<option value="SC">Saint Kitts e Nevis</option>
+<option value="SE">Seychelles</option>
+<option value="SF">&#193;frica do Sul</option>
+<option value="SG">Senegal</option>
+<option value="SH">Santa Helena</option>
+<option value="SI">Eslov&#234;nia</option>
+<option value="SL">Serra Leoa</option>
+<option value="SM">San Marino</option>
+<option value="SN">Cingapura</option>
+<option value="SO">Som&#225;lia</option>
+<option value="SP">Espanha</option>
+<option value="SR">S&#233;rvia</option>
+<option value="ST">Santa L&#250;cia</option>
+<option value="SU">Sud&#227;o</option>
+<option value="SV">Svalbard</option>
+<option value="SW">Su&#233;cia</option>
+<option value="SX">S. Georgia/S. Sandwich</option>
+<option value="SY">S&#237;ria</option>
+<option value="SZ">Su&#237;&#231;a</option>
+<option value="TB">S&#227;o Bartolomeu</option>
+<option value="TD">Trinidad e Tobago</option>
+<option value="TE">Ilha Tromelin</option>
+<option value="TH">Tail&#226;ndia</option>
+<option value="TI">Tajiquist&#227;o</option>
+<option value="TK">Ilhas Turks e Caicos</option>
+<option value="TL">Toquelau</option>
+<option value="TN">Tonga</option>
+<option value="TO">Togo</option>
+<option value="TP">S&#227;o Tom&#233; e Pr&#237;ncipe</option>
+<option value="TS">Tun&#237;sia</option>
+<option value="TT">Timor-Leste</option>
+<option value="TU">Turquia</option>
+<option value="TV">Tuvalu</option>
+<option value="TW">Taiwan</option>
+<option value="TX">Turcomenist&#227;o</option>
+<option value="TZ">Tanz&#226;nia</option>
+<option value="U2">Zona Neutra</option>
+<option value="U3">Ap&#225;trida</option>
+<option value="UG">Uganda</option>
+<option value="UK">Reino Unido</option>
+<option value="UP">Ucr&#226;nia</option>
+<option value="US">Estados Unidos</option>
+<option value="UV">Burkina Faso</option>
+<option value="UY">Uruguai</option>
+<option value="UZ">Usbequist&#227;o</option>
+<option value="VC">S&#227;o Vicente e Granadinas</option>
+<option value="VE">Venezuela</option>
+<option value="VI">Ilhas Virgens Brit&#226;nicas</option>
+<option value="VM">Vietn&#227;</option>
+<option value="VT">Cidade do Vaticano</option>
+<option value="WA">Nam&#237;bia</option>
+<option value="WE">Cisjord&#226;nia</option>
+<option value="WF">Wallis e Futuna</option>
+<option value="WI">Saara Ocidental</option>
+<option value="WS">Samoa</option>
+<option value="WZ">Suazil&#226;ndia</option>
+<option value="YM">I&#234;men</option>
+<option value="ZA">Z&#226;mbia</option>
+<option value="ZI">Zimb&#225;bue</option>
+</select>
+<p id="6th"></p>
+<p><span class="star">*</span>Año de nacimiento</p>
+<input type="text" name="eight" value="" onchange="foryear()";/>
+<p id="8th"></p>
+<p><span class="star">*</span>¿Con qué necesitas ayuda?</p>
+<select class="hegf" name="seven" onchange="formid()";/>
+	<option value=""></option>
+<option value="General English Program">Programas de Ingl&#234;s B&#225;sico</option>
+<option value="EAP">Programas de Ingl&#234;s Acad&#234;mico</option>
+<option value="University Admissions">Admiss&#245;es em universidades</option>
+<option value="Business Communication Programs">Programas de Comunica&#231;&#227;o para neg&#243;cios</option>
+<option value="Youth Programs">Programas para Jovens</option>
+<option value="How to Apply">Como se inscrever</option>
+<option value="Prices and Quotes">Pre&#231;os e cota&#231;&#245;es</option>
+<option value="Admissions">Admiss&#245;es</option>
+<option value="Housing">Alojamento</option>
+<option value="Visas">Vistos</option>
+<option value="iELTS">iELTS</option>
+<option value="CELTA">CELTA</option>
+<option value="TEFL">TEFL</option>
+<option value="ToEFL">ToEFL</option>
+<option value="New Agent">Novo agente</option>
+<option value="Jobs">Empregos</option>
+<option value="Other">Outro</option>
+</select>
+<p id="7th"></p>
+<p><span class="star">*</span>¿En dónde te gustaría estudiar?</p>
+<select class="hgag" name="nine" onchange="foraus()";/>
+<option value=""></option>
+<option value="US">EUA</option>
+<option value="AS">Australia</option>
+<option value="CA">Canada</option>
+<option value="IN">India</option>
+</select>
+<p id="9th"></p>
+<div class="tableRow">
+	<input type="checkbox" name="ten" value="Acepto" onchange="forem()";/> Eu concordo com os
+	<a href="#">Termos de uso</a> e com a <a  href="#">
+		 Política de privacidad</a>
+		 <p id="10th"></p>
+		 </div>
+<div class="but">
+	<input class="button" type="submit" value="ENVIAR" name="mad" onclick="submitFunction()";/></input>
+	<p id="last"></p>
+</div>
+</form>
+
+		</div>
+		</div>
+<p class="b"></p>
+ 
+    <div class="paragraph"> 
+<p id="space">A capacidade de se comunicar com eficácia em inglês é fundamental para se ter acesso à maioria das oportunidades educacionais e de trabalho que aguarda você.</p>
+<p>Desde 1961, o ELS é o principal provedor de programas de inglês em câmpus universitários e em centros de cidades nos EUA. Nosso programa Inglês com Objetivos Acadêmicos já está disponível em centros do ELS na Arábia Saudita, Austrália, Canadá, China, Índia, Kuwait, Malásia, e no Panamá, além de mais de sessenta locais apenas nos EUA.</p>
+<p>O ELS lhe oferece uma variedade de programas para ajudá-lo a adquirir os conhecimentos de inglês que são fundamentais atualmente para o sucesso acadêmico e profissional –experiências cheias de descobertas e aventuras, novos amigos e novas culturas, aprendizado e realizações.</p>
+</article>
+		<article>
+		<h2>INGLÊS COM OBJETIVOS ACADÊMICOS</h2>
+		<p>Para os estudantes que buscam admissão em uma faculdade ou universidade, ao concluírem com sucesso o Nível 109 ou 112 do programa Inglês com Objetivos Acadêmicos (EAP), eles receberão um certificado oficial reconhecido por mais de 650 faculdades e universidades, confirmando que cumprem o requisito de proficiência em inglês exigido para admissão.</p>
+		
+		<p>Além de concentrar em habilidades de compreensão auditiva, expressão oral, leitura, redação, pronúncia e gramática, o currículo do Inglês com Objetivos Acadêmicos do ELS também desenvolve habilidades em:</p>
+		
+		<ul>
+		<li>Pensamento crítico</li>
+		<li>Apresentações</li>
+		<li>Técnicas de anotações</li>
+		<li>Pesquisa acadêmica</li>
+		<li>e muito mais…</li>
+		</ul>
+		<p>As aulas no período da manhã consistem em:</p>
+		<ul>
+		<li>Estrutura Gramatical e Expressão Oral ou Estudos da Língua</li>
+		<li>Enriquecimento do Vocabulário (Níveis 101-109) ou Aulas de Aperfeiçoamento (apenas Masters)</li>
+		<li>Uma aula no Centro de Tecnologia de Idiomas (LTC)</li>
+		</ul>
+		<p>As aulas no período da tarde são dedicadas à leitura e redação.</p>
+		<p>O Contact America! proporciona oportunidades para conhecer pessoas cuja língua materna é o inglês e assistir a palestras.</p>
+		
+		</article>
+		
+		<article>
+		<h2>INGLÊS GERAL</h2>
+		<p>Para todas as pessoas que desejam melhorar seus conhecimentos de inglês necessários para uma comunicação exata e eficaz.</p>
+		
+		<p>O programa inclui o desenvolvimento intensivo de conhecimentos em:</p>
+		<ul>
+		<li>Compreensão Auditiva</li>
+		<li>Pronúncia</li>
+		<li>Gramática</li>
+		<li>Comunicação Oral</li>
+		<li>Vocabulário</li>
+		</ul>
+		<p>As aulas no período da manhã consistem em:</p>
+		<ul>
+		<li>Estrutura Gramatical e Expressão Oral ou Estudos da Língua</li>
+		<li>Enriquecimento do Vocabulário</li>
+		<li>Aula de Aperfeiçoamento de manhã no lugar de Enriquecimento do Vocabulário (níveis Masters)</li>
+		<li>Uma aula no Centro de Tecnologia de Idiomas</li>
+		</ul>
+		<p>As tardes em todos os níveis são dedicadas às Aulas de Aperfeiçoamento como Expressões Idiomáticas Americanas, Cinema Americano, Atualidades e Cultura Americana.*</p>
+		
+		
+		<p>O Contact America! proporciona oportunidades para conhecer pessoas cuja língua materna é o inglês e assistir a palestras. A conversação é feita usando um inglês prático e do mundo real.</p>
+		
+		
+		<p>*Os cursos exatos oferecidos em cada local podem variar.</p>
+		
+		</article>
+		<article>
+			
+			<h2>Semi-Intensivo de Inglês</h2>
+		<p>Para aqueles que querem aprender inglês e, ao mesmo tempo, ter tempo para conhecer as cidades e as atrações locais e colocar em prática fora da sala de aula o inglês que estão aperfeiçoando.</p>
+		
+		<p>Este programa inclui o desenvolvimento das competências linguísticas importantes que são necessárias para se comunicar com precisão e de forma eficaz:</p>
+		
+		
+		
+		<ul>
+		<li>Compreensão Auditiva</li>
+		<li>Pronúncia</li>
+		<li>Comunicação Oral</li>
+		<li>Vocabulário</li>
+		</ul>
+		<p>As aulas são realizadas apenas no período da manhã e formam a base para competência em comunicação. Elas incluem:</p>
+		
+		
+		<ul>
+		<li>Estrutura Gramatical e Expressão Oral ou Estudos da Língua</li>
+		<li>Enriquecimento do Vocabulário</li>
+		<li>Uma aula no Centro de Tecnologia de Idiomas</li>
+		</ul>
+		
+		<p>O Contact America! dá a você oportunidades frequentes de conhecer pessoas cuja língua materna é o inglês, ouvir palestras e participar de excursões locais.</p>
+		
+		<p>A conversação é feita usando um inglês prático e do mundo real.</p>
+			
+			
+		</article>
+		
+		<article>
+			
+			<h2>EXPLORADOR DA AMÉRICA</h2>
+		<p>Para aqueles que estão planejando tirar umas férias curtas e gostariam de incluir algumas aulas para melhorar o inglês e enriquecer o vocabulário.</p>
+		
+		<p>As manhãs são dedicadas às aulas, e as tardes são livres, o que permite que os alunos conheçam a região local e pratiquem o inglês.</p>
+		
+		<p>Este programa inclui o desenvolvimento das competências linguísticas importantes que são necessárias para se comunicar com precisão e de forma eficaz:</p>
+		
+		
+		<ul>
+		<li>Compreensão Auditiva</li>
+		<li>Comunicação Oral</li>
+		<li>Pronúncia</li>
+		<li>Vocabulário</li>
+		</ul>
+			</article>
+		
+			<article>
+			
+			<h2>PROGRAMAS PARA JOVENS DO ELS</h2>
+		<p>Estados Unidos</p>
+		<p>Estudar durante as férias com o ELS coloca os jovens em contato direto com novas culturas e pontos de vista, de um modo totalmente diferente de qualquer experiência virtual. Conhecer outros jovens de vários lugares do mundo abre as mentes jovens, dando-lhes novas perspectivas sobre o mundo ao seu redor. A aquisição de conhecimentos sólidos de inglês lhes proporcionará uma vantagem à medida que se aventurarem pelo mundo no futuro</p>
+		
+		
+		<ul>
+		<li>Programa de Férias para Jovens – para alunos de 10 a 16 anos</li>
+		<li>
+		<ul>
+		<li>Fun & Sun Camp</li>
+		<li>Malibu I & II para Jovens</li>
+		<li>Acomodação de Jovens em Casa de Família em Janeiro</li>
+		</ul>
+		</li>
+		
+		<li>Programas de Preparação para a Universidade – para alunos de 14 a 17 anos</li>
+		<li>Programa Verão em Nova York - para jovens acima de 16 anos</li>
+		<li>Nike Sports Camps – para alunos de 9 a 17 anos</li>
+		</ul>
+		
+		
+		<p>Canadá</p>
+		<ul>
+		<li>Programas de Verão e Inverno para Jovens – para alunos de 9 a 17 anos</li>
+		</ul>
+		
+		
+		<p>Austrália</p>
+		<ul>
+		<li>Programas de Inglês de Férias para Jovens– para alunos de 13 a 17 anos</li>
+		</ul>
+		
+		<p>Programas de Férias para Jovens</p>
+		<p>Esses programas de curta duração do tipo pacote com tudo incluso, criados especificamente para o aluno jovem, reúnem os melhores aspectos da experiência acadêmica e as atrações sociais e culturais da região.</p>
+		
+		
+		
+		<p>Todos os programas têm:</p>
+		
+		<ul>
+		<li>Quinze aulas de 50 minutos por semana, e cinco atividades de expansão de 50 minutos centradas em temas de interesse para crianças</li>
+		<li>Localizados em câmpus universitários imaculados e seguros.</li>
+		<li>Ministrados por professores certificados e altamente experientes com jovens</li>
+		<li>Supervisionados 24 horas por dia por funcionários profissionais, atenciosos e dedicados, os quais foram selecionados cuidadosamente.</li>
+		<li>Situados em câmpus com comodidades como, por exemplo, refeitório, academia de ginástica, piscina e muito mais</li>
+		
+		</ul>
+		
+		<p>Programas de Preparação Universitária - EUA</p>
+		
+		<p>O ELS tem a satisfação de oferecer o Programa de Preparação Universitária em dois câmpus excelentes: na Pepperdine University, situada na linda cidade de Malibu, na Califórnia, e na The Lawrenceville School, em Lawrenceville, Nova Jersey, próximo a Princeton. Estes programas têm tudo incluso e proporcionam aos estudantes entre 14 e 17 anos de idade conhecimentos práticos de inglês combinados com familiarização com o sistema universitário dos EUA através de matérias em sala de aula e passeios pelas universidades da região.</p>
+		
+			
+			
+		</article>
+		</div>
+ 
+<footer>
+		<div id="footer">
+<div id="fp"><sup>&copy;</sup> Copyright 2018 ELS Educational Services, Inc., a <a href="">Berlitz company</a></div>
+<div id="links" class="footerlinks">
+<a href="">Acreditación</a>&nbsp;&nbsp;
+<a href="">Política de privacidad</a>&nbsp;&nbsp;
+<a href="">Términos</a>
+</div>
+</div>
+	</footer>
+</html>
